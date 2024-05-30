@@ -49,7 +49,10 @@ def process_start(pid, server):
         print(server, 'already running with PID', pid)
     else:
         print('Starting', server)
-        cmd = ['/usr/local/anaconda3/bin/python', server]
+        #cmd = ['/usr/local/anaconda3/bin/python', server]
+        cmd = ['/usr/local/anaconda/bin/python3', server]
+        #cmd = ['/usr/bin/python3', server]
+        #cmd = ['/usr/local/anaconda3-5.0.0.1/bin/python3', server]
         p = subprocess.Popen(cmd)
 
 
